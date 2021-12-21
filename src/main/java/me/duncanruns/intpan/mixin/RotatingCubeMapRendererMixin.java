@@ -24,6 +24,9 @@ public abstract class RotatingCubeMapRendererMixin {
     private MinecraftClient client;
 
     private double curve(double x) {
+        if (Math.abs(x) > 1) {
+            x = Math.signum(x);
+        }
         return Math.log(25 * Math.abs(x) + 1) /
                 Math.log(26);
     }
@@ -38,7 +41,7 @@ public abstract class RotatingCubeMapRendererMixin {
         float x = 2 * (float) (client.mouse.getX() - (width / 2.0)) / width;
         delta = delta * (float) (Math.signum(x) * curve(x));
 
-        this.time += delta * 6;
+        this.time += delta * 2;
         this.cubeMap.draw(this.client, MathHelper.sin(this.time * 0.001f) * 5.0f + 25.0f, -this.time * 0.1f, alpha);
     }
 }
