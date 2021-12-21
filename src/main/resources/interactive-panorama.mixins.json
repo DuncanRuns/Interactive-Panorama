@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "me.duncanruns.intpan.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "RotatingCubeMapRendererMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

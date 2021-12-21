@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "interactive-panorama",
+  "version": "${version}",
+  "name": "Interactive Panorama",
+  "description": "A fabric mod to make the title screen panorama follow your mouse.",
+  "authors": [
+    "DuncanRuns"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/interactive-panorama/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.duncanruns.intpan.IntPan"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "interactive-panorama.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.0"
+  }
+}
